@@ -14,3 +14,13 @@ jobs:
 
       - name: Build Docker image
         run: docker build -f containerfile -t my-app .
+
+      - name: Run container
+        run: docker run -d -p 8080:8080 --name my-app
+
+      - name: wait for app to start
+        run: sleep 10
+
+      - name: Test application
+        run: |
+          response=$(curl -s http://localhost:8080)
