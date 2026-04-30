@@ -19,7 +19,7 @@ jobs:
         run: docker run -d -p 8080:8080 my-app
 
       - name: wait for app to start
-        run: sleep 10
+        run: sleep 25
 
       - name: Test application
         run: curl http://localhost:8080
