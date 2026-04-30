@@ -16,7 +16,7 @@ jobs:
         run: docker build -f containerfile -t my-app .
 
       - name: Run container
-        run: docker run -d -p 8080:8080 --name my-app
+        run: docker run -d -p 8080:8080 my-app
 
       - name: wait for app to start
         run: sleep 10
