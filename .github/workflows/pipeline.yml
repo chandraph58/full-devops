@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -f conatinerfile -t my-app .
+        run: docker build -f containerfile -t my-app .
